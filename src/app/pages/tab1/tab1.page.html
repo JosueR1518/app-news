@@ -1,0 +1,17 @@
+<ion-header no-border translucent  >
+  <ion-toolbar class="header-transparent" >
+    <ion-title>
+      Josue's News
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen  >
+
+ <app-noticias [articulos]="articulos"></app-noticias>
+ <ion-infinite-scroll  threshold="250" (ionInfinite)="loadData($event)">
+   <ion-infinite-scroll-content loadingSpinner="crescent" loadingText="Espere...">
+   </ion-infinite-scroll-content>
+ </ion-infinite-scroll>
+   
+</ion-content>

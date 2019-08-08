@@ -1,0 +1,27 @@
+<ion-card mod="ios"  class="animated fadeIn">
+
+    <ion-img *ngIf="noticia.urlToImage"
+    [src]="noticia.urlToImage"
+    (click)="abrirNoticia()"
+     alt=""></ion-img>
+    <ion-card-header>
+      <ion-card-subtitle>
+        <span class="text-primary">
+          {{index}}.
+        </span>
+        <span class="noticia-source-name">{{noticia.source.name}}</span>  
+        
+        
+        <div class="noticia-more">
+            <ion-button fill="clear" (click)="abrirActionSheet()">
+              <ion-icon slot="icon-only" name="more"></ion-icon></ion-button>
+        </div>
+      </ion-card-subtitle>
+      <ion-card-title (click)="abrirNoticia()">{{noticia.title}}</ion-card-title>
+    </ion-card-header>
+
+
+    <ion-card-content>
+      <p>{{noticia.description}} ...</p>
+    </ion-card-content>
+  </ion-card>
