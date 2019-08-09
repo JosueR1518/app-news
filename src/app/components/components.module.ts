@@ -13,6 +13,6 @@ import { NoticiaComponent } from './noticia/noticia.component';
     IonicModule
   ]
 ,
-exports:[NoticiasComponent]
+exports: [NoticiasComponent]
 })
 export class ComponentsModule { }
